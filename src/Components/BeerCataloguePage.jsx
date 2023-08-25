@@ -10,17 +10,23 @@ const BeerCataloguePage = ({ beers }) => {
 	};
 
 	return (
-		<div>
+		<div className="beer-catalogue">
 			<ul className="beer-list">
 				{beers.map((beer) => (
 					<BeerList beer={beer} key={beer.id} likeBeer={likeBeer} />
 				))}
 			</ul>
-			<ul className="liked-beer-list">
-				{likedBeers.map((likedBeer) => (
-					<FavouritedBeers likedBeer={likedBeer} key={likedBeer.id} />
-				))}
-			</ul>
+			<div className="liked-beers-container">
+				<h2>Your Favourite Beers:</h2>
+				<ul className="liked-beer-list">
+					{likedBeers.map((likedBeer) => (
+						<FavouritedBeers
+							likedBeer={likedBeer}
+							key={likedBeer.id}
+						/>
+					))}
+				</ul>
+			</div>
 		</div>
 	);
 };

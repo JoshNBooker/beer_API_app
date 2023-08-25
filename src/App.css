@@ -20,6 +20,12 @@ html{
   margin-top: 1rem;
 }
 
+/* beer-catalogue */
+
+.beer-catalogue {
+  display: flex;
+}
+
 /* beer-list */
 
 .beer-list {

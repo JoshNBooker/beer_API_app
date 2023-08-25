@@ -1,8 +1,10 @@
 const FavouritedBeers = ({ likedBeer }) => {
 	return (
-		<li>
-			<p>{likedBeer.name}</p>
-		</li>
+		<div>
+			<li>
+				<p>{likedBeer.name}</p>
+			</li>
+		</div>
 	);
 };
 
