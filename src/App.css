@@ -1,4 +1,37 @@
-/* modal */
+/* general */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  font-family: Raleway;
+  font-weight: thin;
+}
+
+/* container */
+
+.container {
+  max-width: 150rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+/* beer-list */
+
+.beer-list {
+  list-style: none;
+}
+
+.beer-list__item {
+  max-width: 50rem;
+  padding: 1%;
+}
+
+/* beer-modal */
 
 .modal {
   position: fixed;

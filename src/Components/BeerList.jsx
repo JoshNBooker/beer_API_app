@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import BeerModal from './BeerModal';
 
-const BeerList = ({ beer }) => {
+const BeerList = ({ beer, likeBeer }) => {
 	const [modalVisible, setModalVisible] = useState(false);
 	const [selectedBeer, setSelectedBeer] = useState(null);
 
@@ -14,15 +14,19 @@ const BeerList = ({ beer }) => {
 		setSelectedBeer(null);
 		setModalVisible(false);
 	};
+
 	return (
-		<li>
+		<li className="beer-list__item">
 			<h2>
 				<b>{beer.name}</b>
 			</h2>
 			<h3>{beer.tagline}</h3>
 			<p>{beer.description}</p>
 			<button onClick={() => openModal(beer)}>
-				Interested? Click here
+				<i className="fa-solid fa-eye"></i>
+			</button>
+			<button onClick={() => likeBeer(beer)}>
+				<i className="fa-regular fa-heart"></i>
 			</button>
 			<BeerModal
 				selectedBeer={selectedBeer}

@@ -12,7 +12,7 @@ const BeerAppContainer = () => {
 	});
 
 	return (
-		<div>
+		<div className="container">
 			<Header />
 			<BeerCataloguePage beers={Beers} />
 		</div>
